@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome - для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Наш CSS - кастомные стили -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Истории через образы</title>
+</head>
+
+<body>
+    <!-- ШАПКА -->
+    <header class="top-bar"> onclick="openLightBox('image1')"
+        <div class="top-logo">
+            <a href="index.html"><img src="images/logo.png" alt="Лого компании"></a>
+        </div>
+        <div class="top-slogan">От пикселей к образу</div>
+        <div class="top-phone">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+79871234567">+7 (987) 123-45-67</a>
+        </div>
+    </header>
+    <!-- МЕНЮ -->
+    <nav class="menu-wrapper">
+        <button class="menu-icon"><i class="fas fa-bars"></i></button>
+        <ul class="menu-list">
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    <!-- КОНТЕНТ -->
+    <main class="main-content">
+        <h1>Добро пожаловать</h1>
+        <p>Это демо-страница, отражающая скелет будущего сайта с минимальным дизайном</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <img src="images/image1.png" alt="Услуга 1" onclick="openLightBox('image1.png')">
+                <div class="card-text">
+                    <h2>Услуга 1</h2>
+                    <p>Описание услуги 1</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/image2.png" alt="Услуга 2" onclick="openLightBox('image2.png')">
+                <div class="card-text">
+                    <h2>Услуга 2</h2>
+                    <p>Описание услуги 2</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/image3.png" alt="Услуга 3" onclick="openLightBox('image3.png')">
+                <div class="card-text">
+                    <h2>Услуга 3</h2>
+                    <p>Описание услуги 3</p>
+                </div>
+            </div>
+            <!-- Лайтбокс для всех картинок -->
+             <div class="LightBox" id="LightBox">
+                <span class="close-btn" onclick="closeLightBox()">x</span>
+                <img id="LightBoxImade" title="Увеличенное фото" alt="Увеличенное фото">
+             </div>
+        </div>
+    </main>
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>Контакты</h3>
+            <p><i class="fas fa-phone"></i>&nbsp;<a href="tel:+79871234567">+7 (987) 123-45-67</a></p>
+            <p><i class="fas fa-envelope"></i>&nbsp;<a href="mailto:info@mysite.ru">info@mysite.ru</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Мы в соцсетях</h3>
+            <p>
+                <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Наша миссия</h3>
+            <p>Коротко о миссии компании, ценностях</p>
+        </div>
+    </footer>
+    <button id="topBtn" onclick="scrollToTop()">↑</button>
+    <script src="js/gotop.js"></script>
+    <script src="js/bmenu.js"></script>
+    <script src="js/lbox.js"></script>
+</body>
+
+</html>
